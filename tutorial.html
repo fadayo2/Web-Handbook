@@ -6,22 +6,111 @@
     <title>tutorial</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="tutorial.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/pojoaque.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     
     <nav class="navbar">
+        <div class="lang">
+            <a href="tutorial.html">
+                <button class="cta" style="background-color: white; color: black;">HTML</button>
+            </a>
+            <a href="tutorial.html">
+                <button class="cta">CSS</button>
+            </a>
+            <a href="tutorial.html">
+                <button class="cta">JAVASCRIPT</button>
+            </a>
+        </div>
+
         <i class="fa-solid fa-moon moon" onclick="light()" id="moon"></i>
         <i class="fa-solid fa-sun sun" onclick="dark()" id="sun"></i>
     </nav>
 
     <aside class="sideNav">
-        <a href="#">hello world</a>
-        <a href="#">hello world</a>
-        <a href="#">hello world</a>
+        <a href="#section1" class="nav-link" id="link1">Introduction to HTML</a>
+        <a href="#section2" class="nav-link" id="link2">Go to Section 2</a>
+        <a href="#section3" class="nav-link" id="link3">Go to Section 3</a>
     </aside>
 
+    <section class="contentBody" id="section1">
+        <div class="chapter">
+            <div class="chapter-heading">Introduction to HTML</div>
 
+            <div class="verse">
+                <h2>What is HTML?</h2>
+                <p>HTML stands for HyperText Markup Language, and it’s the backbone of the web. It’s used to structure content for websites so browsers know how to display it. Without HTML, your webpage would just be plain text floating in cyberspace—hardly inspiring!</p> <br>
+
+                <ul>
+                    <li>HyperText: The ability to link from one document to another, forming the “web” part of the World Wide Web.</li>
+                    <li>Markup Language: A set of tags used to define elements on a page, like “this is a heading” or “this is an image.”</li>
+                </ul>
+
+                <h3>Why HTML?</h3>
+                <p>HTML is essential for creating web pages. It structures the content, defines its purpose, and enables the use of multimedia, links, and forms.</p> <br><br>
+
+                <h2>How HTML Works</h2> <br>
+                <p>HTML provides the skeleton of a webpage, which is then styled by CSS and made interactive by JavaScript. Think of it as the foundation of a building—you can’t have a skyscraper without a solid base.</p><br>
+                <p>Here’s a basic HTML example:</p>
+                <pre><code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Introduction to HTML&lt;&#x2F;title&gt;
+&lt;&#x2F;head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Hello, World!&lt;&#x2F;h1&gt;
+    &lt;p&gt;Welcome to the world of HTML. This is your first webpage!&lt;&#x2F;p&gt;
+&lt;&#x2F;body&gt;
+&lt;&#x2F;html&gt;
+                </code></pre>
+                    <br>
+                <p>Explanation:</p>
+
+                <ol>
+                    <li> <mark>&lt;!DOCTYPE html&gt;</mark> : Declares the document as HTML5.</li>
+                    <li> <mark>&lt;html&gt;</mark> : The root element of the HTML document.</li>
+                    <li> <mark>&lt;head&gt;</mark> : Contains metadata like the page title.</li>
+                    <li> <mark>&lt;body&gt;</mark> : Contains all the visible content.</li>
+                </ol>
+            </div>
+            <div class="line"></div>
+
+            <div class="verse">
+                <h2>Basic Structure of an HTML Document</h2>
+                <p>Every HTML document begins with this line:</p>
+                <pre><code class="language-html">&lt;!DOCTYPE html&gt;</code></pre> <br>
+                <p>It informs the browser you’re using HTML5. Without it, browsers might switch to “quirks mode,” rendering your page inconsistently.</p>
+            </div>
+
+            <!-- <div class="line"></div> --> <br>
+
+            <div class="verse">
+                <h2>HTML Document Structure</h2>
+                <p>A typical HTML document looks like this:</p>
+                <pre><code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;
+    &lt;title&gt;My HTML Page&lt;&#x2F;title&gt;
+&lt;&#x2F;head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Welcome!&lt;&#x2F;h1&gt;
+    &lt;p&gt;This is a sample HTML document.&lt;&#x2F;p&gt;
+&lt;&#x2F;body&gt;
+&lt;&#x2F;html&gt;
+                </code></pre>
+            </div>
+
+        </div>
+    </section>
+
+    <script>hljs.highlightAll();</script>
     <script src="script.js"></script>
 </body>
 </html>

@@ -36,21 +36,32 @@ function dark() {
     localStorage.setItem('theme', 'dark');
 }
 
-// Function to toggle the specific link's theme
-function toggleLinkTheme(link) {
-    // Remove styles from all links first
-    document.querySelectorAll('.sideNav a').forEach(a => {
-        a.style.backgroundColor = '';
-        a.style.color = '';
-    });
+// Get all the anchor links
+const links = document.querySelectorAll('.nav-link');
 
-    // Apply styles to the clicked link
-    const theme = localStorage.getItem('theme');
-    if (theme === 'light') {
-        link.style.backgroundColor = 'black'; // Opposing theme
-        link.style.color = 'white';
-    } else if (theme === 'dark') {
-        link.style.backgroundColor = 'white'; // Opposing theme
-        link.style.color = 'black';
+// Function to set 'active' class to the clicked link and store it in localStorage
+links.forEach((link, index) => {
+    link.addEventListener('click', function() {
+        // Remove 'active' class from all links
+        links.forEach(l => l.classList.remove('active'));
+        
+        // Add 'active' class to the clicked link
+        this.classList.add('active');
+        
+        // Store the index of the active link in localStorage
+        localStorage.setItem('activeLink', index);
+    });
+});
+
+// Check if there's a stored active link on page load
+window.addEventListener('load', () => {
+    const activeIndex = localStorage.getItem('activeLink');
+    
+    // If there's a stored active link, apply the 'active' class
+    if (activeIndex !== null) {
+        links[activeIndex].classList.add('active');
+    } else {
+        // Default to the first link if no active link is stored
+        links[0].classList.add('active');
     }
-}
+});
