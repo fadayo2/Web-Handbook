@@ -148,7 +148,6 @@ a {
         font-size: calc(3.5vh + 3.5vw);
     }
     .herosection {
-        border: 1px solid;
         height: 100vh;
     }
 }
