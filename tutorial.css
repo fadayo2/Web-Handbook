@@ -136,3 +136,33 @@
 .verse pre {
     margin-top: 5px;
 }
+
+@media(max-width: 1280px) {
+    .sideNav {
+        width: 0;
+        overflow: hidden;
+    }
+    .contentBody {
+        position: static;
+        margin: auto;
+        border: 1px solid;
+    }
+}
+
+@media(max-width: 820px) {
+    .contentBody {
+        width: 90vw;
+    }
+    .verse {
+        width: 90vw;
+    }
+    .chapter-heading {
+        width: 90vw;
+    }
+}
+
+@media(max-width: 500px) {
+    .contentBody {
+        width: 100vw;
+    }
+}
